@@ -1,0 +1,246 @@
+/* This file contains global CSS styles applied throughout the application. */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    background-color: white;
+    color: black;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+} */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.tab button:hover {
+    background-color: #005bb5;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 70px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    /* justify-content: center; */
+}
+
+.form-section {
+    width: 70%;
+    padding: 20px;
+    background-color: white;
+    margin-left: 35px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #ccc;
+}
+
+header img {
+    margin-right: 10px;
+}
+
+header button {
+    margin-left: auto;
+}
+
+header .company-logo {
+    margin-left: 6%;
+}
+
+header .profile-container {
+    display: flex;
+    align-items: center;
+}
+
+header .profile-container img {
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+header .profile-container button {
+    padding: 8px 16px;
+    /* border: 1px solid #0070f3; */
+    border:none;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-weight: 600;
+}
+
+header .profile-container button:hover {
+    background-color: #f0f0f0;
+}
+/* .headerbutton{
+    background-color: white;
+    color:black;
+    border: none;
+    font-size: medium;
+    /* margin-top: 100px; */
+/* } */ 
+
+.title{
+    margin-left: 125px;
+    margin-top:30px;
+    font-size: 1.75rem;
+    /* margin-bottom: 0px; */
+}
+
+.sidebarbutton{
+    background-color: white;
+    color:#808080;
+    border: none;
+    font-size: medium;
+    padding: 15px;
+    margin-left: 150px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    width: 212px;
+    height: 48px;
+    /* margin-top: 100px; */
+}
+
+
+.sidebarbutton img {
+    margin-right: 10px;
+}
+
+.sidebarbutton span {
+    margin-top: 2px; 
+    margin-left: 10px;/* Adjust this value as needed */
+   
+}
+.highlighted {
+    background-color: rgba(247, 247, 247, 1);
+    color: black;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    margin-top: 60px;
+    /* padding-top: '2rem'; */
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+footer  p{
+    color: #808080;
+    margin-left: 10px;
+}
+footer div img {
+    
+    margin-right: 20px;
+
+    /* gap: 10px; */
+}
+
+.footericons{
+    gap: 6px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    /* border-width: 1216px; */
+    /* boder */
+}
+
+
+
+.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    /* text-align:left; */
+}
+
+.custom-checkbox:checked {
+    background-color: black;
+    border-color: black;
+}
+
+.custom-checkbox:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+
+
