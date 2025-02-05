@@ -40,16 +40,6 @@ const LocationDetailsForm: React.FC<LocationDetailsFormProps> = ({
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   // Mapping from country names (normalized) to ISO country codes
-  const countryCodeMapping: { [key: string]: string } = {
-    usa: 'US',
-    'united states': 'US',
-    us: 'US',
-    america: 'US',
-    canada: 'CA',
-    uk: 'GB',
-    'united kingdom': 'GB',
-    // Add more mappings as needed
-  };
 
 
   const onChange = (

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface SuccessModalProps {
     isOpen: boolean;
@@ -22,24 +23,30 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, imageUrl }
             textAlign: 'center',
             borderRadius: '16px',
         }}>
-            <img src={imageUrl} alt="Success" style={{ maxWidth: '446px', height: '147px', borderRadius:'16px' }} />
+            <Image
+                src={imageUrl}
+                alt="Success"
+                width={446}
+                height={147}
+                style={{ borderRadius: '16px' }}
+            />
             <button
-        onClick={onClose}
-        style={{
-          position: 'absolute',
-          top: '10px',
-          right: '10px',
-          background: 'rgba(229, 229, 229, 1)',
-          border: 'none',
-          fontSize: '1.5rem',
-          cursor: 'pointer',
-          lineHeight: '1',
-          borderRadius: '50%',
-        }}
-        aria-label="Close"
-      >
-        &times;
-      </button>
+                onClick={onClose}
+                style={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    background: 'rgba(229, 229, 229, 1)',
+                    border: 'none',
+                    fontSize: '1.5rem',
+                    cursor: 'pointer',
+                    lineHeight: '1',
+                    borderRadius: '50%',
+                }}
+                aria-label="Close"
+            >
+                &times;
+            </button>
         </div>
     );
 };
