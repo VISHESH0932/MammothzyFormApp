@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ActivityDetailsForm from '../components/ActivityDetailsForm';
 import LocationDetailsForm from '../components/LocationDetailsForm';
 import SuccessModal from '../components/SuccessModal';
+import Image from 'next/image';
 
 interface ActivityDetails {
     name: string;
@@ -31,8 +32,12 @@ interface FormData {
 const Home = () => {
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState<FormData>({
-        activityDetails: { name: '', category: '', description: '', activityType: [], locationType: [], minMembers: '', maxMembers: '' },
-        locationDetails: { address: '', address2:'', city: '', state: '', zipCode: '' , contactnumber: '', contactname: '' },
+        activityDetails: {
+            name: '', category: '', description: '', activityType: [], locationType: [], minMembers: '', maxMembers: ''
+        },
+        locationDetails: {
+            address: '', address2: '', city: '', state: '', zipCode: '', contactnumber: '', contactname: ''
+        }
     });
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -57,7 +62,7 @@ const Home = () => {
     const resetForm = () => {
         setFormData({
             activityDetails: { name: '', category: '', description: '', activityType: [], locationType: [], minMembers: '', maxMembers: '' },
-            locationDetails: { address: '', address2:'', city: '', state: '', zipCode: '', contactnumber: '', contactname: '' },
+            locationDetails: { address: '', address2: '', city: '', state: '', zipCode: '', contactnumber: '', contactname: '' },
         });
         setStep(1);
     };
@@ -65,9 +70,9 @@ const Home = () => {
     return (
         <div className="min-h-screen flex flex-col">
             <header className="flex justify-between items-center p-4 shadow-md bg-white">
-                <img src="/Company.png" alt="Mammothzy" className="w-24 company-logo" />
+                <Image src="/Company.png" alt="Mammothzy" width={195} height={76} className="company-logo" />
                 <div className="profile-container">
-                    <img src="/Avatar.png" alt="Profile" className="w-6 h-6" />
+                    <Image src="/Avatar.png" alt="Profile" width={36} height={36} />
                     <button className="headerbutton">Profile</button>
                 </div>
             </header>
@@ -77,16 +82,22 @@ const Home = () => {
             <div className="flex-container p-4">
                 <div className="sidebar">
                     <div className="p-3 cursor-pointer">
-                        <button className={`sidebarbutton ${step === 1 ? "highlighted" : ""}`} >
-                            <img src="/ActivityImage.png" alt="Activity"/>
-                          <span> Activity Details</span> 
+                        <button
+                            className={`sidebarbutton ${step === 1 ? "highlighted" : ""}`}
+                            onClick={() => setStep(1)}
+                        >
+                            <Image src="/ActivityImage.png" alt="Activity" width={24} height={24} />
+                            <span> Activity Details</span>
                         </button>
                     </div>
                     <div className="p-3 cursor-pointer">
-                       <button className={`sidebarbutton ${step === 2 ? "highlighted" : ""}`}>
-                           <img src="/LocationImage.png" alt="Activity" />
-                           <span> Location Details</span>
-                       </button> 
+                        <button
+                            className={`sidebarbutton ${step === 2 ? "highlighted" : ""}`}
+                            onClick={() => setStep(2)}
+                        >
+                            <Image src="/LocationImage.png" alt="Location" width={24} height={24} />
+                            <span> Location Details</span>
+                        </button>
                     </div>
                 </div>
 
@@ -111,16 +122,16 @@ const Home = () => {
 
             <footer className="flex flex-col items-center p-4 shadow-md bg-white">
                 <div>
-                    <img src="/Company.png" alt="Mammothzy" className="w-24" />
+                    <Image src="/Company.png" alt="Mammothzy" width={195} height={76} />
                 </div>
                 <div>
                     <p>Marketplace for searching, filtering and instantly booking team activities</p>
                 </div>
-                <div className='footericons'>
-                    <img src="/Facebook.png" alt="Facebook" className="w-6 h-6" />
-                    <img src="/Instagram.png" alt="Instagram" className="w-6 h-6" />
-                    <img src="/Linkedin.png" alt="LinkedIn" className="w-6 h-6" />
-                    <img src="/icons.png" alt="Icons" className="w-6 h-6" />
+                <div className="footericons">
+                    <Image src="/Facebook.png" alt="Facebook" width={24} height={24} />
+                    <Image src="/Instagram.png" alt="Instagram" width={24} height={24} />
+                    <Image src="/Linkedin.png" alt="LinkedIn" width={24} height={24} />
+                    <Image src="/icons.png" alt="Icons" width={24} height={24} />
                 </div>
                 <div>
                     <p>Copyright © 2024</p>

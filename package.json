@@ -2,12 +2,11 @@
   "name": "mammothzy-nextjs-app",
   "version": "1.0.0",
   "description": "A Next.js application for Mammothzy, facilitating team bonding activities.",
-  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "type-check": "tsc --noEmit"
   },
   "keywords": [
     "nextjs",
@@ -30,8 +29,14 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "typescript": "latest"
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "overrides": {
+    "flat-cache": {
+      "rimraf": "^4.0.0"
+    }
   }
 }
